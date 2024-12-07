@@ -1,23 +1,28 @@
 {% extends 'main.html' %}
 {% block content %}
 
-<h3>This is just the start!</h3>
-<p>{{ page }}</p>
-
-{% if number > 10 %}
-    <p>Number is greater than 10</p>
-
-{% else %}
-<p>Number is less than 10 </p>
-
-{% endif %}
-<hr>
 <h1>Projects</h1>
-<ul>
-    {% for project in projects %}
-      <li><a href="{% url 'project' project.id %}">{{project.title}}</a> -- {{project.description}}</li>
-    {% endfor %} 
-</ul>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Positive Votes</th>
+    <th>Votes</th>
+    <th>Date</th>
+    <th></th>
+  </tr>
+  {% for project in projects %}
+    <tr>
+      <td>{{project.title}}</td>
+      <td>{{project.vote_ratio}}%</td>
+      <td>{{project.vote_total}}</td>
+      <td>{{project.created}}</td>
+      <td><a href="{% url 'project' project.id %}">View</a></td>
+    </tr>
+
+  {% endfor %} 
+</table>
+
 
 
 {% endblock content %}
