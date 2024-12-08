@@ -40,7 +40,7 @@
 code {
   border-radius: 0.5rem;
   padding: 1rem 2rem;
-  background-color: var(--color-sub);
+  background-color: var(--color-sub); 
   color: var(--color-white);
 }
 
