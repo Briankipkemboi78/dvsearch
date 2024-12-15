@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import Profile
 
+
+def loginPage(request):
+    return render(request, 'users/login_register.html')
+
 def profiles(request):
     profiles = Profile.objects.all()
     context = {'profiles': profiles}
