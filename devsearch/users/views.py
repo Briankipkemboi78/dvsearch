@@ -1,8 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.models import User
 from .models import Profile
 
 
 def loginPage(request):
+
+    if request.method == 'POST':
+        username = request.POST['user']
+
+        try:
+            user = User.objects.get(username=username)
     return render(request, 'users/login_register.html')
 
 def profiles(request):
