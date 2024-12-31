@@ -644,7 +644,7 @@ img {
   position: relative;
   z-index: 1;
   background: transparent;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -664,7 +664,7 @@ img {
 }
 
 .auth > .card {
-  padding: 3rem 4rem;
+  padding: 3rem 3rem;
   width: 95%;
   max-width: 65rem;
 }
